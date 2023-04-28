@@ -1,1 +1,144 @@
+/* Урок 4  */
 
+/* 4.1. Змініть колір тексту на червоний та фон на жовтий, коли користувач наведе курсор миші на кнопку
+  Використовуйте цей селектор :hover */
+.lesson-four-task-one .btn:hover {
+    color: red;
+    background-color: yellow;
+}
+
+/* 4.2. https://codepen.io/kriirii/pen/vYVJExv
+Змініть фон заголовка на зелений, коли користувач наведе курсор миші на посилання:
+Використовуйте цей селектор :hover */
+.lesson-four-task-two .link:hover+.title {
+    background-color: green;
+}
+
+/* 4.3.Змініть колір тексту відвіданого посилання на жовтий: 
+Порада проходити це завдання на https://codepen.io/ ,адже через те,
+що браузер запам'ятовує посилання на які ви заходили вам потрібно буде скидати кеш постійно,
+тому легше всього пройти тут
+Використовуйте цей селектор :visited*/
+
+a:visited {
+    color: yellow;
+}
+
+
+
+/*4.4.Змініть колір тексту посилання, яке знаходиться в блоку з ідентифікатором "sidebar", на червоний: -->
+ Порада проходити це завдання на https://codepen.io/ ,адже через те, що браузер запам'ятовує посилання на які ви заходили вам потрібно буде скидати кеш постійно,
+тому легше всього пройти тут
+Використовуйте цей селектор :link*/
+#sidebar .link:link {
+    color: red;
+}
+
+/* 4.5.Змініть колір фону кнопки на синій, коли кнопка активна Використовуйте цей селектор :active*/
+.lesson-four-task-five .btn:active {
+    background-color: blue;
+}
+
+/* 4.6.Змініть колір тексту та фон кнопки, коли вона отримує фокус, на помаранчевий:Використовуйте цей селектор :focus*/
+
+.lesson-four-task-six .btn:focus {
+    color: orange;
+    background-color: #f8853a;
+}
+
+/* 4.7.Змініть колір тексту та фон елемента, який вказаний в URL як фрагмент, на зелений, коли на нього встановлюється :target:
+Використовуйте цей селектор :target*/
+.lesson-four-task-seven #target:target {
+    background-color: green;
+    color: white;
+}
+
+/* 4.8. Змініть колір тексту на білий та фон елемента на синій при натискані відповідного чекбоксу:
+Використовуйте цей селектор :checked */
+.lesson-four-task-eight #checkbox:checked~#target {
+    color: white;
+    background-color: blue;
+}
+
+/* 4.9.Змінити колір тексту на синій для усіх елементів на сторінці, які написані українською мовою.
+Використовуйте цей селектор :lang() */
+
+:lang(uk) {
+    color: blue;
+}
+
+/* 4.10. Змінити колір тексту на червоний та фон на жовтий елементів форми, які включені та доступні для введення.
+Використовуйте цей селектор :enabled*/
+.lesson-four-task-ten form input:enabled {
+    background-color: yellow;
+    color: red;
+}
+
+/* 4.11.При використанні селектора :disabled змінити фоновий колір на жовтий в полях введення, які є неактивними.
+Використовуйте цей селектор :disabled */
+.lesson-four-task-eleven input:disabled {
+    background-color: yellow;
+}
+
+/* 4.12.Встановіть жовтий фоновий колір для елементів <input>, що без атрибута readonly.
+Використовуйте цей селектор :read-write */
+.lesson-four-task-twelve input:read-write {
+    background-color: yellow;
+}
+
+/* 4.13.Встановіть жовтий фоновий колір для інпуту з атрибутом readonly.*/
+.lesson-four-task-thirteen input[readonly] {
+    background-color: yellow;
+}
+
+/* 4.14. Зробіть поле вводу зеленим, коли введене значення коректне, і червоним - якщо ні.
+Використовуйте ці селектори :valid та :invalid  */
+.lesson-four-task-fourteen input:valid {
+    background-color: green;
+}
+
+.lesson-four-task-fourteen input:invalid {
+    background-color: red;
+}
+
+/* 4.15. Застосувати селектор :optional до текстового поля форми,
+  яке не є обов'язковим для заповнення, і змінити його фон на червоний.Використовуйте цей селектор :optional  */
+.lesson-four-task-fifteen :optional {
+    background-color: red;
+}
+
+/* 4.16.Є форма з полем вводу числа, яке може бути від 0 до 100.
+Задача змінити колір тексту поля вводу на червоний, якщо значення не входить до цього діапазону.
+Використовуйте цей селектор :out-of-range */
+.lesson-four-task-sixteen input[type='number']:out-of-range {
+    color: red;
+}
+
+/* 4.17.Є форма з полем вводу числа, яке може бути від 0 до 100.
+Задача змінити колір тексту на червоний, якщо значення входять до діапазону від 0 до 100.
+Використовуйте цей селектор :in-range- */
+
+.lesson-four-task-seventeen #quantity:not(:in-range) {
+    color: red;
+}
+
+/* 4.18.У цьому завданні потрібно зробити, щоб змінювався колір фону placeholder на червоний ,
+  який зникає, коли користувач починає вводити.Використовуйте цей селектор :placeholder-shown */
+.lesson-four-task-eighteen input::placeholder {
+    background-color: red;
+}
+
+.lesson-four-task-eighteen input:focus::placeholder {
+    background-color: transparent;
+}
+
+/* 4.19. Застосуйте селектор :focus-within до блоку, який змінює колір тексту на білий та фоновий колір на жовтий при активному стані*/
+.lesson-four-task-nineteen:focus-within {
+    color: white;
+    background-color: yellow;
+}
+
+/* 4.20. При валідації форми з помилкою, змінюйте колір фону на червоний.Використовуйте цей селектор :invalid */
+.lesson-four-task-twenty input:invalid {
+    background-color: red;
+}
